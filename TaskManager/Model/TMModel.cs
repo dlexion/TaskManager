@@ -32,7 +32,7 @@ namespace TaskManager.Model
                     Owner = GetOwner(process),
                     PriorityClass = GetPriority(process),
                     PrivateMemorySize64 = GetUsedMemory(process),
-                    NumberOfThreads = GetNumverOfThreads(process)
+                    NumberOfThreads = GetNumberOfThreads(process)
                 });
             }
             return processes;
@@ -126,7 +126,7 @@ namespace TaskManager.Model
             }
         }
 
-        private int GetNumverOfThreads(Process process)
+        private int GetNumberOfThreads(Process process)
         {
             try
             {
