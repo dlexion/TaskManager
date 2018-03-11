@@ -42,12 +42,15 @@
             this.dataGridView.AllowUserToDeleteRows = false;
             this.dataGridView.AllowUserToOrderColumns = true;
             this.dataGridView.AllowUserToResizeRows = false;
+            this.dataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView.Location = new System.Drawing.Point(0, 0);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.ReadOnly = true;
-            this.dataGridView.Size = new System.Drawing.Size(800, 450);
+            this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView.Size = new System.Drawing.Size(800, 425);
             this.dataGridView.TabIndex = 0;
             // 
             // statusStrip
@@ -57,6 +60,7 @@
             this.tsslProcessesCount});
             this.statusStrip.Location = new System.Drawing.Point(0, 428);
             this.statusStrip.Name = "statusStrip";
+            this.statusStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
             this.statusStrip.Size = new System.Drawing.Size(800, 22);
             this.statusStrip.TabIndex = 1;
             this.statusStrip.Text = "statusTrip";
@@ -70,8 +74,8 @@
             // tsslProcessesCount
             // 
             this.tsslProcessesCount.Name = "tsslProcessesCount";
-            this.tsslProcessesCount.Size = new System.Drawing.Size(118, 17);
-            this.tsslProcessesCount.Text = "toolStripStatusLabel2";
+            this.tsslProcessesCount.Size = new System.Drawing.Size(13, 17);
+            this.tsslProcessesCount.Text = "0";
             // 
             // ProcessesView
             // 

@@ -71,6 +71,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\PVController.cs" />
     <Compile Include="Model\ITMModel.cs" />
     <Compile Include="Model\TMModel.cs" />
     <Compile Include="ProcessInfo.cs" />

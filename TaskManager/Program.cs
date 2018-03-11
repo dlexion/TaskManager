@@ -4,6 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using TaskManager.View;
+using TaskManager.Model;
+using TaskManager.Controller;
+
 namespace TaskManager
 {
     static class Program
@@ -15,6 +19,15 @@ namespace TaskManager
         static void Main()
         {
 
+
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+
+            ProcessesView view = new ProcessesView();
+            ITMModel model = new TMModel();
+            PVController controller = new PVController(model, view);
+
+            Application.Run(view);
         }
     }
 }
