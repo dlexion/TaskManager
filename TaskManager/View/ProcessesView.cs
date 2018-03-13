@@ -49,5 +49,10 @@ namespace TaskManager.View
         {
             tsslProcessesCount.Text = count;
         }
+
+        public void SetMemoryUsage(string value)
+        {
+            tsslMemoryUsageValue.Text = value;
+        }
     }
 }

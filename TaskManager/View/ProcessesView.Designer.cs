@@ -32,6 +32,8 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.tsslProcesses = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslProcessesCount = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tsslMemoryUsage = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tsslMemoryUsageValue = new System.Windows.Forms.ToolStripStatusLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -59,7 +61,9 @@
             // 
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsslProcesses,
-            this.tsslProcessesCount});
+            this.tsslProcessesCount,
+            this.tsslMemoryUsage,
+            this.tsslMemoryUsageValue});
             this.statusStrip.Location = new System.Drawing.Point(0, 428);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
@@ -78,6 +82,18 @@
             this.tsslProcessesCount.Name = "tsslProcessesCount";
             this.tsslProcessesCount.Size = new System.Drawing.Size(13, 17);
             this.tsslProcessesCount.Text = "0";
+            // 
+            // tsslMemoryUsage
+            // 
+            this.tsslMemoryUsage.Name = "tsslMemoryUsage";
+            this.tsslMemoryUsage.Size = new System.Drawing.Size(89, 17);
+            this.tsslMemoryUsage.Text = "Memory usage:";
+            // 
+            // tsslMemoryUsageValue
+            // 
+            this.tsslMemoryUsageValue.Name = "tsslMemoryUsageValue";
+            this.tsslMemoryUsageValue.Size = new System.Drawing.Size(13, 17);
+            this.tsslMemoryUsageValue.Text = "0";
             // 
             // ProcessesView
             // 
@@ -102,5 +118,7 @@
         private System.Windows.Forms.StatusStrip statusStrip;
         private System.Windows.Forms.ToolStripStatusLabel tsslProcesses;
         private System.Windows.Forms.ToolStripStatusLabel tsslProcessesCount;
+        private System.Windows.Forms.ToolStripStatusLabel tsslMemoryUsage;
+        private System.Windows.Forms.ToolStripStatusLabel tsslMemoryUsageValue;
     }
 }

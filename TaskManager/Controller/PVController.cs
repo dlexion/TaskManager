@@ -26,7 +26,13 @@ namespace TaskManager.Controller
             timer.Interval = 2000;
             timer.Tick += UpdateView;
             timer.Tick += UpdateProcessesCount;
+            timer.Tick += UpdateMemoryUsage;
             timer.Start();
+        }
+
+        private void UpdateMemoryUsage(object sender, EventArgs e)
+        {
+            view.SetMemoryUsage(model.GetTotalMemoryUsage().ToString());
         }
 
         private void UpdateProcessesCount(object sender, EventArgs e)
