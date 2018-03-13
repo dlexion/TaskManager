@@ -85,6 +85,12 @@
     <Compile Include="View\ProcessesView.Designer.cs">
       <DependentUpon>ProcessesView.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\ThreadsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ThreadsView.Designer.cs">
+      <DependentUpon>ThreadsView.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -96,6 +102,9 @@
     </Compile>
     <EmbeddedResource Include="View\ProcessesView.resx">
       <DependentUpon>ProcessesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ThreadsView.resx">
+      <DependentUpon>ThreadsView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">

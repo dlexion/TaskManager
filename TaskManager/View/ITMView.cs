@@ -10,5 +10,7 @@ namespace TaskManager.View
     interface ITMView
     {
         void SetDataSource(BindingSource source);
+        int FirstDisplayedRow { get; set; }
+        int SelectedRow { get; }
     }
 }
