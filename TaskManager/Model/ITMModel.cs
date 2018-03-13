@@ -12,5 +12,6 @@ namespace TaskManager.Model
         List<ProcessInfo> GetProcesses();
         List<ThreadInfo> GetThreads(Process process);
         int GetNumberOfProcesses();
+        float GetTotalMemoryUsage();
     }
 }

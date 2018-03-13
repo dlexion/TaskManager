@@ -22,7 +22,7 @@ namespace TaskManager
         public String PriorityClass { get; set; }
 
         [DisplayName("Memory")]
-        public long PrivateMemorySize64 { get; set; }
+        public float PrivateMemorySize64 { get; set; }
 
         [DisplayName("Threads")]
         public int NumberOfThreads { get; set; }

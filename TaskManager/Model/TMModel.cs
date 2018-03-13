@@ -114,11 +114,11 @@ namespace TaskManager.Model
             }
         }
 
-        private long GetUsedMemory(Process process)
+        private float GetUsedMemory(Process process)
         {
             try
             {
-                return process.PrivateMemorySize64;
+                return process.PrivateMemorySize64/1024f/1024f; // convet bytes into megabytes
             }
             catch
             {
@@ -181,5 +181,16 @@ namespace TaskManager.Model
             }
         }
         #endregion
+
+        public float GetTotalMemoryUsage()
+        {
+            float memoryUsage = 0;
+            foreach(var process in Process.GetProcesses())
+            {
+                memoryUsage += GetUsedMemory(process);
+            }
+
+            return memoryUsage;
+        }
     }
 }
