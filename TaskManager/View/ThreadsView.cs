@@ -57,7 +57,7 @@ namespace TaskManager.View
 
         private void ThreadsView_FormClosing(object sender, FormClosingEventArgs e)
         {
-            controller.timer.Stop();
+            controller.ViewClosed();
         }
 
         public void SetTitle(string title)

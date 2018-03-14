@@ -12,7 +12,7 @@ namespace TaskManager.Controller
 {
     public class TVController
     {
-        public Timer timer;
+        private Timer timer;
         private ITMModel model;
         private ThreadsView view;
         private Process process;
@@ -25,6 +25,7 @@ namespace TaskManager.Controller
             SetController();
             view.SetTitle(process.ProcessName);
         }
+
         public TVController()
         {
             timer = new Timer();

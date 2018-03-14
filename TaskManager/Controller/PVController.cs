@@ -21,6 +21,7 @@ namespace TaskManager.Controller
             this.view = view;
             SetController();
         }
+
         public PVController()
         {
             timer = new Timer();
