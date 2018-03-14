@@ -29,5 +29,13 @@ namespace TaskManager
 
             Application.Run(view);
         }
+
+        public static void CreateThreadsWindow(System.Diagnostics.Process process)
+        {
+            ThreadsView view = new ThreadsView();
+            ITMModel model = new TMModel();
+            TVController controller = new TVController(model, view, process);
+            view.Visible = true;
+        }
     }
 }

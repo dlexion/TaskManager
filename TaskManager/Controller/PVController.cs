@@ -9,7 +9,7 @@ using TaskManager.Model;
 
 namespace TaskManager.Controller
 {
-    class PVController
+    public class PVController
     {
         private Timer timer;
         private ITMModel model;
@@ -19,6 +19,7 @@ namespace TaskManager.Controller
         {
             this.model = model;
             this.view = view;
+            SetController();
         }
         public PVController()
         {
@@ -28,6 +29,11 @@ namespace TaskManager.Controller
             timer.Tick += UpdateProcessesCount;
             timer.Tick += UpdateMemoryUsage;
             timer.Start();
+        }
+
+        private void SetController()
+        {
+            view.SetController(this);
         }
 
         private void UpdateMemoryUsage(object sender, EventArgs e)
@@ -53,6 +59,11 @@ namespace TaskManager.Controller
             view.SetDataSource(source);
 
             view.FirstDisplayedRow = displayedRow;
+        }
+
+        public void DoubleClick(int proceddId)
+        {
+            Program.CreateThreadsWindow(System.Diagnostics.Process.GetProcessById(proceddId));
         }
     }
 }

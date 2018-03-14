@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TaskManager
 {
-    class ThreadInfo
+    public class ThreadInfo
     {
         [DisplayName("ID")]
         public String ID { get; set; }

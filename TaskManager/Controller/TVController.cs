@@ -10,9 +10,9 @@ using TaskManager.View;
 
 namespace TaskManager.Controller
 {
-    class TVController
+    public class TVController
     {
-        private Timer timer;
+        public Timer timer;
         private ITMModel model;
         private ThreadsView view;
         private Process process;
@@ -22,6 +22,8 @@ namespace TaskManager.Controller
             this.model = model;
             this.view = view;
             this.process = process;
+            SetController();
+            view.SetTitle(process.ProcessName);
         }
         public TVController()
         {
@@ -30,6 +32,11 @@ namespace TaskManager.Controller
             timer.Tick += UpdateView;
             timer.Tick += UpdateThreadsCount;
             timer.Start();
+        }
+
+        private void SetController()
+        {
+            view.SetController(this);
         }
 
         private void UpdateThreadsCount(object sender, EventArgs e)
@@ -50,6 +57,11 @@ namespace TaskManager.Controller
             view.SetDataSource(source);
 
             view.FirstDisplayedRow = displayedRow;
+        }
+
+        public void ViewClosed()
+        {
+            timer.Stop();
         }
     }
 }

@@ -40,6 +40,11 @@ namespace TaskManager.View
             InitializeComponent();
         }
 
+        public void SetController(PVController controller)
+        {
+            this.controller = controller;
+        }
+
         public void SetDataSource(BindingSource source)
         {
             dataGridView.DataSource = source;
@@ -53,6 +58,11 @@ namespace TaskManager.View
         public void SetMemoryUsage(string value)
         {
             tsslMemoryUsageValue.Text = value;
+        }
+
+        private void dataGridView_DoubleClick(object sender, EventArgs e)
+        {
+            controller.DoubleClick(System.Convert.ToInt32((sender as DataGridView).CurrentRow.Cells[1].Value));
         }
     }
 }

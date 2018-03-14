@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TaskManager.Model
 {
-    interface ITMModel
+    public interface ITMModel
     {
         List<ProcessInfo> GetProcesses();
         List<ThreadInfo> GetThreads(Process process);

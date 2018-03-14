@@ -13,6 +13,8 @@ namespace TaskManager.View
 {
     public partial class ThreadsView : Form, ITMView
     {
+        TVController controller;
+
         public ThreadsView()
         {
             InitializeComponent();
@@ -38,6 +40,11 @@ namespace TaskManager.View
             }
         }
 
+        public void SetController(TVController controller)
+        {
+            this.controller = controller;
+        }
+
         public void SetDataSource(BindingSource source)
         {
             dataGridViewThreads.DataSource = source;
@@ -46,6 +53,16 @@ namespace TaskManager.View
         public void SetThreadsCount(string value)
         {
             tsslThreadsCountValue.Text = value;
+        }
+
+        private void ThreadsView_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            controller.timer.Stop();
+        }
+
+        public void SetTitle(string title)
+        {
+            this.Text = title;
         }
     }
 }

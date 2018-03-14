@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TaskManager
 {
-    class ProcessInfo
+    public class ProcessInfo
     {
         [DisplayName("Name")]
         public String ProcessName { get; set; }
