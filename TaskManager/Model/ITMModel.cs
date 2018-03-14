@@ -13,5 +13,6 @@ namespace TaskManager.Model
         List<ThreadInfo> GetThreads(Process process);
         int GetNumberOfProcesses();
         float GetTotalMemoryUsage();
+        int GetNumberOfThreads(Process process);
     }
 }

@@ -125,18 +125,6 @@ namespace TaskManager.Model
                 return -1;
             }
         }
-
-        private int GetNumberOfThreads(Process process)
-        {
-            try
-            {
-                return process.Threads.Count;
-            }
-            catch
-            {
-                return -1;
-            }
-        }
         #endregion
 
         public int GetNumberOfProcesses()
@@ -191,6 +179,18 @@ namespace TaskManager.Model
             }
 
             return memoryUsage;
+        }
+
+        public int GetNumberOfThreads(Process process)
+        {
+            try
+            {
+                return process.Threads.Count;
+            }
+            catch
+            {
+                return -1;
+            }
         }
     }
 }
